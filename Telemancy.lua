@@ -29,12 +29,12 @@ local L = Telemancy.strings;
 
 -- Event frame! How.. eventful.
 local eventFrame = CreateFrame("FRAME");
-eventFrame:RegisterEvent("WORLD_MAP_UPDATE");
-eventFrame:SetScript("OnEvent", function(...) t.OnEvent(...); end);
+eventFrame:RegisterEvent("QUEST_DATA_LOAD_RESULT");
+eventFrame:SetScript("OnEvent", function(...) t.OnEvent(...) end);
 
 t.OnEvent = function(self, event, ...)
 	-- The world map has updated, check our stuff!
-	if event == "WORLD_MAP_UPDATE" then
+	if event == "QUEST_DATA_LOAD_RESULT" then
 		-- Check the world map is actually shown.
 		if WorldMapFrame:IsShown() then
 			-- Confirm that we're in the correct zone (and multi-map level).
