@@ -58,7 +58,8 @@ t.UpdateIcons = function()
 	end
 
 	-- Iterate every spawned icon and update it.
-	local frameWidth, frameHeight = WorldMapPOIFrame:GetSize();
+	local frameWidth = WorldMapFrame:GetWidth();
+	local frameHeight = WorldMapFrame:GetHeight();
 	for key, icon in pairs(t.icons) do
 		-- set the icons when WorldMap is updating (eg. Zoom)
 		if icon.removedBy and IsQuestFlaggedCompleted(icon.removedBy) then
