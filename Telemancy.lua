@@ -38,7 +38,9 @@ t.OnEvent = function(self, event, ...)
 		-- Check the world map is actually shown.
 		if WorldMapFrame:IsShown() then
 			-- Confirm that we're in the correct zone (and multi-map level).
-			if GetCurrentMapAreaID() == MAP_ID and GetCurrentMapDungeonLevel() == 0 then
+			local uiMapID = C_Map.GetBestMapForUnit("player");
+			local mapInfo = C_Map.GetMapInfo(uiMapID)
+			if mapInfo.mapID == MAP_ID and mapInfo.mapType == 3 then
 				t.UpdateIcons();
 				return;
 			end
