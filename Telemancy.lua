@@ -3,7 +3,7 @@
 local ICON_OFFSET = 14; -- Icon is 28x28
 local ACTIVE_ICON = [[Interface/MINIMAP/Vehicle-AllianceMagePortal]];
 local INACTIVE_ICON = [[Interface/MINIMAP/Vehicle-HordeMagePortal]];
-local MAP_ID = 1033;
+local MAP_ID = 680;
 local POINTS = {
 	{ teleX = 31.30, teleY = 10.78, teleName = "TELE_MOON_GUARD", questID = 43808 },
 	{ teleX = 22.68, teleY = 36.42, teleName = "TELE_FALANAAR", questID = 42230 },
